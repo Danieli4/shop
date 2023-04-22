@@ -10,7 +10,7 @@ class StoreController extends Controller
 {
     public function __invoke(StoreRequest $storeRequest)
     {
-        //dd($storeRequest);
+        dd($storeRequest);
         $data = $storeRequest->validated();
         User::firstOrCreate([
             'email' => $data['email']

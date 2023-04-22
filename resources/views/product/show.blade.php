@@ -6,7 +6,7 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1 class="m-0">Категория</h1>
+                    <h1 class="m-0">Продукт {{$product->title}}</h1>
                 </div><!-- /.col -->
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
@@ -27,9 +27,10 @@
                     <div class="card">
                         <div class="card-header d-flex p-2">
                             <div class="mr-3">
-                                <a href="{{route('category.edit', $category->id)}}" class="btn btn-primary">Редактировать</a>
+                                <a href="{{route('product.edit', $product->id)}}"
+                                   class="btn btn-primary">Редактировать</a>
                             </div>
-                            <form action="{{route('category.delete', $category->id)}}" method="post">
+                            <form action="{{route('product.delete', $product->id)}}" method="post">
                                 @csrf
                                 @method('DELETE')
                                 <input type="submit" class="btn btn-danger" value="Удалить">
@@ -39,13 +40,57 @@
                         <div class="card-body table-responsive p-0">
                             <table class="table table-hover text-nowrap">
                                 <tbody>
-                                    <tr>
-                                        <td>ID</td>
-                                        <td> {{ $category->id}}</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Наименование</td>
-                                        <td> <a href="{{route('category.edit', $category->id)}}"> {{$category->title}}</a></td>
+                                <tr>
+                                    <td>ID</td>
+                                    <td> {{ $product->id}}</td>
+                                </tr>
+                                <tr>
+                                    <td>Наименование</td>
+                                    <td><a href="{{route('product.edit', $product->id)}}"> {{$product->title}}</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Описание</td>
+                                    <td><a href="{{route('product.edit', $product->id)}}"> {{$product->description}}</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Контент</td>
+                                    <td><a href="{{route('product.edit', $product->id)}}"> {{$product->content}}</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Цена</td>
+                                    <td><a href="{{route('product.edit', $product->id)}}"> {{$product->price}}</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Количество</td>
+                                    <td><a href="{{route('product.edit', $product->id)}}"> {{$product->count}}</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Категория</td>
+                                    <td><a href="{{route('product.edit', $product->id)}}"> {{$category}}</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Теги</td>
+                                    @if($tags)
+                                        <td>
+                                        @foreach($tags as $tag)
+                                            <a href="{{route('product.edit', $product->id)}}"> {{(isset($tag->title))?$tag->title:"нет тегов"}}</a>
+                                        @endforeach
+                                        </td>
+                                    @else
+                                        <td><a href="{{route('product.edit', $product->id)}}"> {{"нет тегов"}}</a></td>
+                                    @endif
+                                </tr>
+                                <tr>
+                                    <td>Цвета</td>
+@if($colors->isEmpty())
+                                        <td><a href="{{route('product.edit', $product->id)}}"> {{"нет цветов"}}</a></td>
+@endif
+                                        @foreach($colors as $color)
+                                        <td><a href="{{route('product.edit', $product->id)}}"> {{$color->title}}</a></td>
+                                        @endforeach
+
                                     </tr>
 
                                 </tbody>
