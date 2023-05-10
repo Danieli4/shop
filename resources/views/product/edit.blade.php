@@ -57,6 +57,18 @@
                             @endforeach
                         </select>
                     </div>
+
+                    <div class="form-group">
+                        <select name="group_id" class="form-control select2 " style="width: 100%;">
+
+                            @foreach($groups as $group)
+                                {{$group->id===$product->group_id ? 'selected' : ''}}
+                                <option value="{{$group->id}}">{{$group->title}}</option>
+
+                            @endforeach
+                        </select>
+                    </div>
+
                     <div class="form-group">
                         <select name="tags[]" class="tags" multiple="" data-placeholder="Выберите теги"
                                 style="width: 100%;">
