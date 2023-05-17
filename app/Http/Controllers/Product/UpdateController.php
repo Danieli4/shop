@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Product;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\API\Product\UpdateRequest;
+use App\Http\Requests\Product\UpdateRequest;
 use App\Models\Product;
 use App\Models\Tag;
 use Illuminate\Support\Facades\Storage;

@@ -23,7 +23,7 @@ class IndexController extends Controller
 
         $filter=app()->make(ProductFilter::class, ['queryParams' => array_filter($data)]);
         //dump($filter);
-        $products = Product::filter($filter)->get();
+        $products = Product::filter($filter)->paginate(12, ['*'], 'page', $data['page']);
         return IndexProductResource::collection($products);
     }
 }
