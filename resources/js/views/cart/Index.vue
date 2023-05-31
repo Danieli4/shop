@@ -2,45 +2,8 @@
     <!DOCTYPE html>
     <html lang="en">
 
-    <head>
-        <!-- Required Meta -->
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!-- Title For This Document -->
-        <title> Karte - Multipurpose E-Commerce Html Template</title>
-        <!-- Favicon For This Document -->
-        <link rel="shortcut icon" href="../../../assets/images/logo/favicon-32x32.png" type="image/x-icon">
-        <!-- Bootstrap 5 Css -->
-        <link rel="stylesheet" href="../../../assets/css/bootstrap.5.1.1.min.css">
-        <!-- Google fonts -->
-        <link
-            href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap"
-            rel="stylesheet">
-        <!-- FlatIcon Css -->
-<!--        <link rel="stylesheet" href="../../../assets/fonts/flaticon.css">-->
-
-        <!-- Slick Slider Css -->
-        <link rel="stylesheet" href="../../../assets/css/plugin/slick.css">
-        <!--  Ui Tabs Css -->
-        <link rel="stylesheet" href="../../../assets/css/plugin/jquery-ui.min.css">
-        <!-- Magnific-popup Css -->
-        <link rel="stylesheet" href="../../../assets/css/plugin/magnific-popup.css">
-        <!-- Nice Select Css -->
-        <link rel="stylesheet" href="../../../assets/css/plugin/nice-select.v1.0.css">
-        <!-- Animate Css -->
-        <link rel="stylesheet" href="../../../assets/css/plugin/animate.css">
-        <!-- Style Css -->
-        <link rel="stylesheet" href="../../../assets/css/style.css">
-
-    </head>
-
     <body>
-    <!-- ==========Preloader========== -->
-    <div class="loader"><span>Karte...</span></div> <!-- ==========Preloader========== -->
-    <!--===scroll bottom to top===--> <a href="#0" class="scrollToTop"><i class="flaticon-up-arrow"></i></a>
-    <!--===scroll bottom to top===-->
-    <!-- header-default -->
+
     <header class="header-default">
         <!-- Start Desktop Menu -->
         <div class="menubox">

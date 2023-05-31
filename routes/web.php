@@ -78,4 +78,3 @@ Route::get('/', \App\Http\Controllers\Main\IndexController::class)->name('main.i
     });
 });
 Route::get('{page}', App\Http\Client\IndexController::class)->where('page', '.*');
-
